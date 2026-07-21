@@ -1,0 +1,4 @@
+# Ensure scripts executed inside Linux containers always use LF line endings.
+# CRLF breaks bash entrypoints (e.g. `--daemon=true\r`) and psql `-f` scripts.
+*.sh   text eol=lf
+*.sql  text eol=lf
